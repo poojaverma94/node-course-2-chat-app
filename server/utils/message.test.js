@@ -3,10 +3,10 @@ var expect = require('expect');
 var {generateMessage} = require('./message');
 
 describe('generateMessage', () => {
-  it ('should generate correct message object', () => {
+  it ('should generate correct message objects', () => {
     var from = 'jen';
-    var text = 'some message';
-    var message = generateMessage(from,text);
+    var text = 'Some message';
+    
     expect(message.createdAt).toBeA('number');
     expect(message).toInclude({from,text});
   });
